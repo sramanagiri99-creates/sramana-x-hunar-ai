@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hunar AI Proposal</title>
+<meta name="description" content="Hunar AI × Sramana Giri — a brand, content & growth proposal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap">
+<style>
+/* A deck you scroll: sage backdrop, rounded paper and ink "slides", a tight grotesk,
+   oversized section numerals and monochrome charts. Projections are labelled as such. */
+:root{
+  --bg:#CBD4E4; --paper:#F7F5F1; --white:#FFFFFF; --ink:#0F1D45; --ink-2:#46506B; --ink-3:#8590AD;
+  --line:#DDE1EA; --track:#E8EBF2; --grey:#A9BADB;
+  --d-text:#F5F1EB; --d-2:#B6BED4; --d-3:#7F8AAB; --d-line:#26346A; --d-track:#16244D;
+  --peach:#F6B99C; --rose:#EE9DB5; --butter:#F7D58B;
+  --grad:linear-gradient(90deg,#F7D58B,#F6B99C 45%,#EE9DB5);
+  --sans:"Inter Tight","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --r:28px; --gap:16px; --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+h1,h2,h3,h4,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.deck{max-width:1320px;margin:0 auto;padding:0 var(--gap) var(--gap)}
+.row{display:grid;gap:var(--gap);margin-top:var(--gap)}
+.r-13{grid-template-columns:minmax(0,1fr) minmax(0,2.1fr)}
+.r-31{grid-template-columns:minmax(0,2.1fr) minmax(0,1fr)}
+.r-11{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+@media (max-width:900px){.r-13,.r-31,.r-11{grid-template-columns:minmax(0,1fr)}}
+
+/* slide */
+.slide{position:relative;background:var(--paper);border-radius:var(--r);padding:clamp(22px,3.4vw,48px);display:flex;flex-direction:column;overflow:hidden;min-width:0}
+.slide.dark{background:radial-gradient(70% 55% at 100% 100%,rgba(238,157,181,.20),rgba(238,157,181,0) 70%),radial-gradient(60% 50% at 0% 0%,rgba(46,87,176,.55),rgba(46,87,176,0) 70%),#0E1B44;color:var(--d-text)}
+.slide.flush{padding:0}
+.chrome{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11.5px;color:var(--ink-3)}
+.dark .chrome{color:var(--d-3)}
+.chrome.bot{margin-top:auto;padding-top:clamp(28px,3vw,40px)}
+.brand{display:inline-flex;align-items:center;gap:8px;font-weight:500;color:var(--ink);font-size:12.5px}
+.dark .brand{color:var(--d-text)}
+.star{width:14px;height:14px;flex:none}
+.pg b{color:var(--ink);font-weight:600;margin-left:8px}
+.dark .pg b{color:var(--d-text)}
+.arr{width:22px;height:22px;flex:none;stroke:currentColor;stroke-width:1.4;fill:none}
+.arr.lg{width:clamp(30px,3vw,40px);height:clamp(30px,3vw,40px)}
+
+/* type */
+.display{font-weight:400;font-size:clamp(52px,9.6vw,148px);line-height:.88;letter-spacing:-.05em}
+.h2{font-weight:400;font-size:clamp(34px,4.6vw,66px);line-height:.98;letter-spacing:-.04em;text-wrap:balance}
+.h2 .mute,.display .mute,.h3 .mute{color:var(--ink-3)}
+.dark .h2 .mute,.dark .display .mute{color:var(--peach)}
+.h3{font-weight:400;font-size:clamp(24px,2.3vw,32px);line-height:1.05;letter-spacing:-.03em}
+.caps{text-transform:uppercase;font-weight:400;font-size:clamp(28px,3vw,42px);line-height:1;letter-spacing:-.02em}
+.numeral{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.04em;font-weight:400;font-size:clamp(96px,13vw,190px);line-height:.78;letter-spacing:-.06em}
+.lede{font-size:clamp(16.5px,1.35vw,19px);line-height:1.5;color:var(--ink-2);text-wrap:pretty}
+.dark .lede{color:var(--d-2)}
+.small{font-size:11.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.dark .small{color:var(--d-3)}
+.body p{color:var(--ink-2);text-wrap:pretty}
+.body p+p,.body p+ul,.body ul+p{margin-top:14px}
+.dark .body p{color:var(--d-2)}
+.pull{font-size:clamp(22px,2.1vw,30px);line-height:1.15;letter-spacing:-.025em;color:var(--ink);text-wrap:balance}
+.pull .mute{color:var(--ink-3)}
+.dark .pull{color:var(--d-text)}
+.dark .pull .mute{color:var(--peach)}
+.pill{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;border:1px solid currentColor;font-size:12.5px;width:max-content}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:var(--white);border:1px solid var(--line);font-size:12px;font-weight:500;width:max-content}
+.dark .tag{background:transparent;border-color:var(--d-line);color:var(--d-2)}
+.tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--grad)}
+
+/* lists */
+.bul li{position:relative;padding:11px 0 11px 28px;border-top:1px solid var(--line);color:var(--ink-2);font-size:15px;line-height:1.45}
+.bul li:last-child{border-bottom:1px solid var(--line)}
+.bul li::before{content:"↗";position:absolute;left:2px;top:10px;font-size:14px;color:#D9809A}
+.dark .bul li{border-color:var(--d-line);color:var(--d-2)}
+.dark .bul li::before{color:var(--peach)}
+
+/* image plates: monochrome architectural compositions, no text on them */
+.plate{border-radius:16px;background-size:cover;background-position:center;min-height:120px}
+.p-arch{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='400' height='300' fill='rgb(214,224,242)'/%3E%3Crect y='150' width='400' height='150' fill='rgb(246,205,180)'/%3E%3Ccircle cx='300' cy='110' r='52' fill='rgb(247,213,139)'/%3E%3Cpolygon points='0,140 120,90 120,300 0,300' fill='rgb(169,186,219)'/%3E%3Cpolygon points='120,90 230,130 230,300 120,300' fill='rgb(110,136,190)'/%3E%3Cpolygon points='230,130 330,80 330,300 230,300' fill='rgb(196,208,232)'/%3E%3Cpolygon points='330,80 400,110 400,300 330,300' fill='rgb(70,96,156)'/%3E%3Crect y='230' width='400' height='70' fill='rgb(20,38,92)'/%3E%3C/svg%3E")}
+.p-stripe{background:repeating-linear-gradient(112deg,#0F1D45 0 9px,#F3EEE6 9px 14px,#F6B99C 14px 17px,#F3EEE6 17px 24px)}
+.p-stripe2{background:linear-gradient(90deg,rgba(15,29,69,.88),rgba(15,29,69,0) 60%),repeating-linear-gradient(68deg,#13285E 0 22px,#DCE3F0 22px 26px,#EE9DB5 26px 30px,#DCE3F0 30px 44px)}
+.p-arc{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='400' height='300' fill='rgb(15,29,69)'/%3E%3Crect x='0' y='0' width='170' height='300' fill='rgb(169,186,219)'/%3E%3Ccircle cx='250' cy='190' r='110' fill='rgb(247,213,139)'/%3E%3Ccircle cx='250' cy='190' r='70' fill='rgb(246,185,156)'/%3E%3Crect x='250' y='60' width='160' height='260' fill='rgb(19,40,94)'/%3E%3Crect x='0' y='240' width='400' height='60' fill='rgb(238,157,181)'/%3E%3C/svg%3E")}
+.p-grid{background-color:#D6DEEE;background-image:repeating-linear-gradient(0deg,transparent 0 26px,#8FA3CC 26px 28px),repeating-linear-gradient(90deg,#E9EEF7 0 34px,#8FA3CC 34px 36px),linear-gradient(120deg,#E9EEF7,#F6D3C2);background-blend-mode:multiply}
+.p-sky{background:linear-gradient(180deg,#C9D6EE 0%,#F2C6B4 70%,#F7D58B 100%)}
+.p-tree{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400' preserveAspectRatio='xMidYMid slice'%3E%3Crect width='300' height='400' fill='rgb(186,201,230)'/%3E%3Crect y='170' width='300' height='140' fill='rgb(242,201,184)'/%3E%3Ccircle cx='215' cy='250' r='46' fill='rgb(247,213,139)'/%3E%3Crect y='300' width='300' height='100' fill='rgb(42,64,124)'/%3E%3Cg stroke='rgb(15,29,69)' fill='none' stroke-linecap='round'%3E%3Cpath d='M150 400 L150 220' stroke-width='7'/%3E%3Cpath d='M150 270 L100 190 L80 130' stroke-width='4'/%3E%3Cpath d='M150 250 L205 170 L215 110' stroke-width='4'/%3E%3Cpath d='M100 190 L60 170' stroke-width='2.5'/%3E%3Cpath d='M205 170 L245 150' stroke-width='2.5'/%3E%3Cpath d='M150 220 L150 120 L140 70' stroke-width='3'/%3E%3Cpath d='M80 130 L70 95' stroke-width='2'/%3E%3Cpath d='M215 110 L230 80' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;padding:12px var(--gap);display:flex;justify-content:center;pointer-events:none}
+.nav-in{pointer-events:auto;display:flex;align-items:center;gap:6px;padding:6px;border-radius:999px;background:rgba(15,29,69,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.18);max-width:100%}
+.nav-in .brand{color:#fff;padding:0 12px 0 10px}
+.menu{display:flex;gap:2px}
+.menu a{padding:8px 14px;border-radius:999px;font-size:13px;color:#BDBDB9;transition:background .2s,color .2s;white-space:nowrap}
+.menu a:hover{color:#fff}
+.menu a.on{background:#fff;color:var(--ink)}
+.nav-cta{padding:8px 16px;border-radius:999px;background:var(--grad);color:var(--ink);font-size:13px;font-weight:500;white-space:nowrap}
+@media (max-width:980px){.menu{display:none}}
+
+/* cover */
+.cover-art{position:relative;margin:6px;border-radius:22px;height:clamp(260px,32vw,420px);overflow:hidden;color:#fff;display:flex;align-items:center;justify-content:center;padding:24px;
+  background:radial-gradient(55% 75% at 88% 112%,#F7D58B 0%,rgba(247,213,139,0) 62%),radial-gradient(45% 70% at 62% 108%,#EE9DB5 0%,rgba(238,157,181,0) 66%),radial-gradient(70% 90% at 12% -10%,#2E57B0 0%,rgba(46,87,176,0) 70%),linear-gradient(160deg,#0E1B44 0%,#13285E 55%,#24396F 100%)}
+.cover-art::after{content:"";position:absolute;inset:0;opacity:.09;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.ca-rings{position:absolute;right:-8%;top:50%;width:min(62vw,620px);aspect-ratio:1;transform:translateY(-50%);border-radius:50%;border:1px solid rgba(255,255,255,.12);box-shadow:0 0 0 60px rgba(255,255,255,.025),0 0 0 120px rgba(255,255,255,.02)}
+.ca-lock{position:relative;display:flex;align-items:center;gap:clamp(10px,2vw,28px);flex-wrap:wrap;justify-content:center;font-size:clamp(36px,6.4vw,96px);letter-spacing:-.05em;line-height:1;text-align:center}
+.ca-a{display:inline-flex;align-items:center;gap:.22em}
+.ca-a .star{width:.55em;height:.55em;color:#F7D58B}
+.ca-x{font-weight:300;color:#F6B99C}
+.ca-b{background:linear-gradient(90deg,#F7D58B,#F6B99C 45%,#EE9DB5);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.06em}
+.ca-top,.ca-meta{position:absolute;left:22px;right:22px;display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.ca-top{top:18px}.ca-meta{bottom:18px}
+@media (max-width:560px){.ca-meta span:last-child{display:none}}
+.cover-imgs{display:grid;grid-template-columns:1.1fr 1.6fr 1fr;gap:6px;height:clamp(200px,30vw,380px);padding:6px}
+.cover-imgs .plate{border-radius:22px 6px 6px 6px;min-height:0}
+.cover-imgs .plate:nth-child(2){border-radius:6px}
+.cover-imgs .plate:nth-child(3){border-radius:6px 22px 6px 6px}
+.cover-body{padding:clamp(24px,3.6vw,52px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
+.cover-meta{display:flex;flex-direction:column;align-items:flex-end;gap:18px;text-align:right}
+.cover-meta .yr{display:flex;align-items:center;gap:10px;font-size:22px;letter-spacing:-.02em}
+.cover-meta .yr small{font-size:9px;line-height:1.05;color:var(--ink-3);text-transform:uppercase;text-align:left}
+@media (max-width:760px){.cover-body{grid-template-columns:minmax(0,1fr)}.cover-meta{align-items:flex-start;text-align:left}.cover-imgs{grid-template-columns:1fr 1fr}.cover-imgs .plate:nth-child(3){display:none}}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;background:var(--ink);color:#fff;font-size:14px;font-weight:500;white-space:nowrap;transition:transform .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.dark .btn{background:var(--grad);color:var(--ink)}
+
+/* contents */
+.toc li a{display:grid;grid-template-columns:56px minmax(0,1fr) 24px;align-items:center;gap:10px;padding:13px 0;border-top:1px solid var(--line);font-size:clamp(16px,1.4vw,19px);letter-spacing:-.02em;transition:padding .3s var(--ease)}
+.toc li:last-child a{border-bottom:1px solid var(--line)}
+.toc li a span{color:var(--ink-3);font-size:13px}
+.toc li a:hover{padding-left:8px}
+.toc .arr{width:18px;height:18px}
+
+/* columns with dividers (the "offerings" layout) */
+.cols{display:grid;gap:0}
+.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.col{padding:0 clamp(16px,2vw,28px);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:14px;min-width:0}
+.col:first-child{padding-left:0;border-left:0}
+.col:last-child{padding-right:0}
+.dark .col{border-color:var(--d-line)}
+.col-head{display:flex;align-items:flex-start;gap:12px}
+.col-head .n{font-size:clamp(30px,2.8vw,40px);line-height:.9;letter-spacing:-.04em}
+.col-head .t{font-size:11.5px;font-weight:500;margin-top:4px}
+.col .plate{height:52px;min-height:0;border-radius:4px;margin-top:auto}
+@media (max-width:1000px){.cols-5{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.cols-5 .col:nth-child(odd){padding-left:0;border-left:0}}
+@media (max-width:820px){.cols-3{grid-template-columns:minmax(0,1fr);row-gap:28px}.cols-3 .col{padding:0;border-left:0;padding-top:24px;border-top:1px solid var(--line)}.dark .cols-3 .col{border-color:var(--d-line)}.cols-3 .col:first-child{padding-top:0;border-top:0}}
+@media (max-width:520px){.cols-5{grid-template-columns:minmax(0,1fr)}.cols-5 .col{padding:0;border-left:0}}
+
+/* section title card */
+.title-card{min-height:clamp(320px,34vw,460px)}
+.title-card .bottom{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;gap:12px}
+.statement{min-height:clamp(320px,34vw,460px)}
+.statement .plate{margin-top:auto;height:clamp(110px,12vw,160px)}
+
+/* figures */
+.fig-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.fig-title{font-size:clamp(19px,1.6vw,23px);letter-spacing:-.025em;line-height:1.15}
+.fig-sub{font-size:12.5px;color:var(--ink-3);margin-top:3px}
+.dark .fig-sub{color:var(--d-3)}
+svg.chart{display:block;width:100%;height:auto;overflow:visible}
+.ax{font-family:var(--sans);font-size:11px;fill:var(--ink-3)}
+.dark .ax{fill:var(--d-3)}
+.gl{stroke:var(--line);stroke-width:1}
+.dark .gl{stroke:var(--d-line)}
+.lab{font-family:var(--sans);font-size:12.5px;fill:var(--ink-2)}
+.dark .lab{fill:var(--d-2)}
+.labb{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink)}
+.dark .labb{fill:var(--d-text)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-2)}
+.dark .legend{color:var(--d-2)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:14px;height:3px;border-radius:2px;display:inline-block}
+.note{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-top:12px}
+.dark .note{color:var(--d-3)}
+.hit{fill:transparent;cursor:crosshair}
+.draw{stroke-dasharray:var(--len,2000);stroke-dashoffset:var(--len,2000);transition:stroke-dashoffset 2.2s var(--ease)}
+.in .draw{stroke-dashoffset:0}
+.grow{transform-box:fill-box;transform-origin:left center;transform:scaleX(0);transition:transform 1.3s var(--ease)}
+.growy{transform-box:fill-box;transform-origin:center bottom;transform:scaleY(0);transition:transform 1.3s var(--ease)}
+.in .grow,.in .growy{transform:none}
+
+/* stat tiles */
+.stats{display:grid;gap:var(--gap)}
+.stats-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.stats-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.stat{border-top:1px solid var(--line);padding-top:14px}
+.dark .stat{border-color:var(--d-line)}
+.stat .v{font-size:clamp(40px,4.4vw,64px);line-height:.9;letter-spacing:-.05em}
+.stat .v .mute{color:var(--ink-3)}
+.dark .stat .v .mute{color:var(--peach)}
+.stat .k{font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.4}
+.dark .stat .k{color:var(--d-2)}
+@media (max-width:860px){.stats-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.stats-3{grid-template-columns:minmax(0,1fr)}}
+
+/* funnel */
+.funnel{display:flex;flex-direction:column;gap:6px}
+.fstep{display:grid;grid-template-columns:150px minmax(0,1fr) 54px;align-items:center;gap:14px;font-size:14px}
+.fstep .tr{height:34px;background:var(--track);border-radius:4px;position:relative;overflow:hidden}
+.fstep .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--grey)}
+.fstep:nth-child(n+4) .tr i{background:var(--ink)}
+.fstep:last-child .tr i{background:var(--grad)}
+.fstep .pc{font-size:13px;font-weight:600;text-align:right}
+@media (max-width:560px){.fstep{grid-template-columns:104px minmax(0,1fr) 46px;gap:10px;font-size:12.5px}}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flow span{padding:9px 14px;border-radius:999px;border:1px solid var(--ink);font-size:13.5px}
+.flow span.g{background:var(--ink);color:#fff;box-shadow:inset 0 -2px 0 var(--peach)}
+.flow b{font-weight:400;color:var(--ink-3)}
+
+/* fn progress bars */
+.fn-bar{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.fn-bar i{display:block;height:100%;background:var(--grad)}
+
+/* tooltip */
+#tip{position:fixed;z-index:200;pointer-events:none;background:var(--ink);color:#fff;font-size:12.5px;line-height:1.4;padding:9px 12px;border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.25);opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;max-width:240px}
+#tip.on{opacity:1;transform:none}
+#tip b{font-weight:600;color:var(--peach)}
+
+/* close */
+.close{min-height:clamp(420px,52vw,620px);justify-content:space-between}
+.sig{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sig .av{width:42px;height:42px;border-radius:50%;background:var(--grad);color:var(--ink);display:grid;place-items:center;font-size:18px;font-weight:500}
+.sig div{line-height:1.3;font-size:14px;font-weight:500}
+.sig div small{display:block;font-weight:400;color:var(--d-3);font-size:12.5px}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 8px 8px;font-size:12px;color:#4E5A78}
+footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.draw{stroke-dashoffset:0}.grow,.growy{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="star" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></g></symbol>
+    <symbol id="ne" viewBox="0 0 24 24"><path d="M5 19 19 5M8 5h11v11"/></symbol>
+    <symbol id="sw" viewBox="0 0 24 24"><path d="M19 5 5 19M16 19H5V8"/></symbol>
+    <symbol id="nw" viewBox="0 0 24 24"><path d="M19 19 5 5M5 16V5h11"/></symbol>
+  </defs>
+</svg>
+
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top"><svg class="star"><use href="#star"/></svg>Hunar AI × Sramana Giri</a>
+    <div class="menu" id="menu">
+      <a href="#top" class="on">Overview</a>
+      <a href="#s01">Opportunity</a>
+      <a href="#s02">Channels</a>
+      <a href="#s08">Growth</a>
+      <a href="#s09">Function</a>
+      <a href="#s10">Why me</a>
+    </div>
+    <a class="nav-cta" href="https://sramanagiri99-creates.github.io/portfolio/" target="_blank" rel="noopener">Portfolio ↗</a>
+  </div>
+</nav>
+
+<main class="deck" id="top">
+
+<!-- ============ COVER ============ -->
+<section class="row">
+  <div class="slide flush rv" style="background:var(--white)">
+    <div class="cover-art" role="img" aria-label="Hunar AI × Sramana Giri">
+      <div class="ca-rings" aria-hidden="true"></div>
+      <div class="ca-top"><span>Proposal</span><span>2026</span></div>
+      <div class="ca-lock"><span class="ca-a"><svg class="star"><use href="#star"/></svg>Hunar AI</span><span class="ca-x">×</span><span class="ca-b">Sramana Giri</span></div>
+      <div class="ca-meta"><span>A brand, content &amp; growth proposal</span><span>Hiring · Onboarding · Workforce</span></div>
+    </div>
+    <div class="cover-body">
+      <div>
+        <p class="small" style="margin-bottom:18px">Hunar AI × Sramana Giri</p>
+        <h1 class="display">Build a brand that people recognise, <span class="mute">remember and trust.</span></h1>
+      </div>
+      <div class="cover-meta">
+        <span class="tag" style="background:var(--paper)"><svg class="star" style="width:12px;height:12px"><use href="#star"/></svg>Hunar AI</span>
+        <div class="yr"><small>Pro<br>posal</small>2026</div>
+        <p style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;max-width:22ch">A brand, content &amp; growth proposal</p>
+        <svg class="arr lg"><use href="#nw"/></svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="row r-31">
+  <div class="slide rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Introduction</span><svg class="arr"><use href="#sw"/></svg></div>
+    <p class="pull" style="margin-top:clamp(28px,4vw,56px);max-width:34ch;font-size:clamp(24px,2.5vw,36px)">Hunar is building technology that can transform how businesses hire, onboard and manage their workforce. <span class="mute">The opportunity is to translate that innovation into a stronger brand presence and a marketing engine that drives awareness, trust and business growth.</span></p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:32px">
+      <a class="btn" href="#s02">See the plan <span>↗</span></a>
+      <a class="btn ghost" href="#s10">Why me</a>
+    </div>
+    <div class="chrome bot"><span>Introduction &amp; Overview</span><span class="pg">Proposal<b>P.01</b></span></div>
+  </div>
+  <div class="slide dark rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Contents</span></div>
+    <ul class="toc" style="margin-top:20px">
+      <li><a href="#s01" style="border-color:var(--d-line)"><span>01.</span>Opportunity<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s02" style="border-color:var(--d-line)"><span>02.</span>YouTube<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s03" style="border-color:var(--d-line)"><span>03.</span>Instagram<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s04" style="border-color:var(--d-line)"><span>04.</span>LinkedIn<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s05" style="border-color:var(--d-line)"><span>05.</span>Community<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s06" style="border-color:var(--d-line)"><span>06.</span>Creators<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s07" style="border-color:var(--d-line)"><span>07.</span>Offline<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s08" style="border-color:var(--d-line)"><span>08.</span>Growth<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s09" style="border-color:var(--d-line)"><span>09.</span>The function<svg class="arr"><use href="#ne"/></svg></a></li>
+      <li><a href="#s10" style="border-color:var(--d-line)"><span>10.</span>Why me?<svg class="arr"><use href="#ne"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ PHILOSOPHY ============ -->
+<section class="row r-11" id="approach">
+  <div class="slide rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span><svg class="arr"><use href="#sw"/></svg></div>
+    <p class="small" style="margin-top:clamp(28px,4vw,52px)">The way I look at brand building</p>
+    <h2 class="h2" style="margin-top:16px;font-size:clamp(28px,2.9vw,42px);line-height:1.05">Today, brand building is no longer confined to the traditional boundaries of B2B and B2C marketing. <span class="mute">A strong brand can be built around its own identity, storytelling and the specific audience it wants to reach.</span></h2>
+    <div class="body" style="margin-top:28px"><p>For Hunar, I'd focus on creating a distinct brand narrative tailored to the businesses, decision-makers and industries we're targeting. Strong branding creates familiarity, credibility and organic awareness over time, reducing our dependence on continuously spending on paid platforms like Meta just to reach potential customers. As this awareness compounds, it creates a lasting brand advantage that paid distribution alone cannot replicate.</p></div>
+    <div class="chrome bot"><span>Brand Philosophy</span><span class="pg">Proposal<b>P.02</b></span></div>
+  </div>
+  <div class="slide rv">
+    <div class="fig-head">
+      <div><div class="fig-title">Awareness that compounds</div><div class="fig-sub">Audience awareness index over 24 months</div></div>
+      <div class="legend"><span><i style="background:var(--ink)"></i>Brand-led</span><span><i style="background:var(--grey)"></i>Paid-only</span></div>
+    </div>
+    <svg class="chart" viewBox="0 0 560 300" role="img" aria-label="Illustrative: brand-led awareness compounds over 24 months while paid-only reach rises and falls with spend">
+      <line class="gl" x1="40" x2="550" y1="20" y2="20"/><line class="gl" x1="40" x2="550" y1="85" y2="85"/><line class="gl" x1="40" x2="550" y1="150" y2="150"/><line class="gl" x1="40" x2="550" y1="215" y2="215"/><line x1="40" x2="550" y1="260" y2="260" stroke="var(--ink-3)"/>
+      <g class="ax"><text x="4" y="24">100</text><text x="10" y="89">70</text><text x="10" y="154">40</text><text x="10" y="219">10</text>
+        <text x="40" y="282">M1</text><text x="160" y="282">M6</text><text x="290" y="282">M12</text><text x="415" y="282">M18</text><text x="525" y="282">M24</text></g>
+      <path class="draw" fill="none" stroke="var(--grey)" stroke-width="2" stroke-dasharray="0" stroke-linejoin="round" d="M40,220 L85,175 L130,168 L162,226 L200,176 L245,168 L277,227 L320,174 L365,166 L397,228 L440,176 L485,168 L517,228 L550,178"/>
+      <path class="draw" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" d="M40,246 C130,238 200,222 270,196 C340,170 410,128 470,88 C505,64 530,48 550,38"/>
+      <circle cx="550" cy="38" r="7" fill="var(--peach)" stroke="var(--ink)" stroke-width="2.5"/>
+      <text class="labb" x="525" y="32" text-anchor="end">Compounds</text>
+      <text class="lab" x="50" y="150">Stops when spend stops</text>
+      <line id="aw-x" class="gl" x1="0" x2="0" y1="20" y2="260" style="display:none;stroke:var(--ink-3);stroke-dasharray:3 4"/>
+      <rect class="hit" id="aw-hit" x="40" y="10" width="510" height="252"/>
+    </svg>
+    <p class="note">Illustrative projection — the shape of the effect, not a forecast.</p>
+    <div class="stats stats-3" style="margin-top:auto;padding-top:28px">
+      <div class="stat"><div class="v">B2B<span class="mute">+</span></div><div class="k">Beyond B2B vs B2C boundaries</div></div>
+      <div class="stat"><div class="v">↓<span class="mute"> Meta</span></div><div class="k">Less dependence on paid reach</div></div>
+      <div class="stat"><div class="v">∞</div><div class="k">Awareness that compounds</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 OPPORTUNITY ============ -->
+<section class="row r-13" id="s01">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 1</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Where I see<br>the opportunity</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">01.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Where I see the opportunity</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 28px">The product has a story. <span class="mute">The brand needs to communicate it.</span></h3>
+    <div class="plate p-stripe" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <div class="body">
+      <p>After exploring Hunar's website and its presence across Instagram, YouTube and LinkedIn, I see an opportunity to bring greater consistency and direction to its brand communication.</p>
+      <p>The platforms are active and content is being published, but the overall narrative and presentation could be much more cohesive. The content needs a recognisable identity, with every platform contributing to the same larger brand story.</p>
+      <p>YouTube, in particular, could benefit from stronger production quality across scripting, audio, editing and presentation. For a company building sophisticated AI technology, the quality of communication should reflect the quality of the product.</p>
+      <p>When content doesn't convey the same level of professionalism and innovation, it creates a gap between what the company offers and how potential customers perceive it.</p>
+    </div>
+    <p class="pull" style="margin-top:32px;padding-top:24px;border-top:1px solid var(--ink)">My first priority would be to establish a consistent brand identity and bring the quality of communication in line with the value of the product.</p>
+    <div class="chrome bot"><span>Where I see the opportunity</span><span class="pg">Proposal<b>P.03</b></span></div>
+  </div>
+  <div class="slide rv">
+    <div class="fig-head"><div><div class="fig-title">Closing the perception gap</div><div class="fig-sub">Every platform pointing at one brand story</div></div></div>
+    <svg class="chart" viewBox="0 0 520 380" role="img" aria-label="Diagram: website, Instagram, YouTube and LinkedIn converge into one Hunar brand story">
+      <g fill="none" stroke="var(--ink)" stroke-width="1.3">
+        <path class="draw" d="M122,48 C260,48 260,190 368,190"/>
+        <path class="draw" d="M122,138 C260,138 280,190 368,190"/>
+        <path class="draw" d="M122,242 C260,242 280,190 368,190"/>
+        <path class="draw" d="M122,332 C260,332 260,190 368,190"/>
+      </g>
+      <g font-family="Inter Tight, sans-serif" font-size="13.5" font-weight="500" text-anchor="middle">
+        <rect x="10" y="28" width="112" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="66" y="53">Website</text>
+        <rect x="10" y="118" width="112" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="66" y="143">Instagram</text>
+        <rect x="10" y="222" width="112" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="66" y="247">YouTube</text>
+        <rect x="10" y="312" width="112" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="66" y="337">LinkedIn</text>
+      </g>
+      <circle cx="440" cy="190" r="74" fill="var(--ink)"/>
+      <circle cx="440" cy="190" r="88" fill="none" stroke="#EE9DB5" stroke-dasharray="2 5"/>
+      <text x="440" y="186" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="22" letter-spacing="-.5" fill="#fff">One brand</text>
+      <text x="440" y="212" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="22" letter-spacing="-.5" fill="#F6B99C">story</text>
+    </svg>
+    <div class="stats" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-top:auto;padding-top:24px">
+      <div class="stat"><div class="small">Today</div><div class="k">Active platforms, separate narratives.</div></div>
+      <div class="stat" style="border-color:var(--ink)"><div class="small" style="color:var(--ink)">Next</div><div class="k" style="color:var(--ink)">One identity, communicated everywhere.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 YOUTUBE ============ -->
+<section class="row r-13" id="s02">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 2</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">YouTube</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">02.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>YouTube</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 20px">Make Hunar a brand <span class="mute">people want to watch.</span></h3>
+    <p class="lede" style="max-width:60ch;margin-bottom:24px">YouTube can become more than a platform for product updates. It can be a place where people understand Hunar, experience its technology and discover how AI is changing the future of HR.</p>
+    <div class="plate p-arch" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide rv" style="background:var(--white)">
+    <div class="chrome" style="margin-bottom:clamp(24px,3vw,40px)"><span style="font-size:clamp(22px,2vw,28px);color:var(--ink);letter-spacing:-.03em">Content Pillars</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="cols cols-3">
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">01.</div><div class="t">Inside Hunar</div></div></div>
+        <p style="color:var(--ink);font-size:15.5px">A closer look at the people and ideas behind the company.</p>
+        <ul class="bul">
+          <li>Founder-led conversations and company stories.</li>
+          <li>Product launches and feature walkthroughs.</li>
+          <li>Customer conversations and real-world experiences.</li>
+          <li>Team stories, challenges and experiments.</li>
+        </ul>
+        <div class="plate p-stripe" aria-hidden="true"></div>
+      </div>
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">02.</div><div class="t">The AI HR Experiment</div></div></div>
+        <p style="color:var(--ink);font-size:15.5px">Make the product interesting through real-world demonstrations.</p>
+        <ul class="bul">
+          <li>Can an AI HR screen 100 candidates?</li>
+          <li>Human recruiter vs AI HR.</li>
+          <li>How does an AI agent handle multilingual conversations?</li>
+          <li>Can AI simplify repetitive HR workflows?</li>
+        </ul>
+        <div class="plate p-stripe2" aria-hidden="true"></div>
+      </div>
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">03.</div><div class="t">The Future of Work</div></div></div>
+        <p style="color:var(--ink);font-size:15.5px">Conversations around the changing world of hiring and workforce management.</p>
+        <ul class="bul">
+          <li>Interviews with founders and business leaders.</li>
+          <li>Conversations with CHROs and recruitment professionals.</li>
+          <li>Discussions on AI, hiring and workforce transformation.</li>
+        </ul>
+        <div class="plate p-grid" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="chrome bot"><span class="brand" style="font-weight:400;color:var(--ink-3)"><svg class="star" style="color:var(--ink)"><use href="#star"/></svg>YouTube · Content Pillars</span><span class="pg">Proposal<b>P.04</b></span></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide dark rv">
+    <span class="tag">Production standard</span>
+    <p class="pull" style="margin-top:22px">The focus would be on polished production, with strong scripting, professional filming, clear audio, editing, thumbnails and a consistent visual direction.</p>
+    <svg class="chart" viewBox="0 0 480 120" style="margin-top:auto;padding-top:32px" role="img" aria-label="Production pipeline: script, film, audio, edit, thumbnail, publish">
+      <line x1="20" x2="460" y1="40" y2="40" stroke="var(--d-line)" stroke-width="2"/>
+      <line class="draw" x1="20" x2="460" y1="40" y2="40" stroke="#F6B99C" stroke-width="2"/>
+      <g fill="#F6B99C"><circle cx="20" cy="40" r="6"/><circle cx="108" cy="40" r="6"/><circle cx="196" cy="40" r="6"/><circle cx="284" cy="40" r="6"/><circle cx="372" cy="40" r="6"/></g>
+      <circle cx="460" cy="40" r="10" fill="#0E1B44" stroke="#F7D58B" stroke-width="2"/>
+      <g class="ax" text-anchor="middle" style="letter-spacing:.06em"><text x="20" y="78">SCRIPT</text><text x="108" y="78">FILM</text><text x="196" y="78">AUDIO</text><text x="284" y="78">EDIT</text><text x="372" y="78">THUMBNAIL</text><text x="460" y="78" style="fill:#fff">PUBLISH</text></g>
+    </svg>
+  </div>
+  <div class="slide rv">
+    <div class="fig-head"><div><div class="fig-title">One long-form video, many assets</div><div class="fig-sub">Assets per video · illustrative</div></div></div>
+    <p style="color:var(--ink-2);font-size:15px;margin-bottom:18px">Each long-form video can also be repurposed into YouTube Shorts, Instagram Reels, LinkedIn posts and other content formats.</p>
+    <svg class="chart" viewBox="0 0 470 170" role="img" aria-label="Illustrative: one video produces 4 Shorts, 4 Reels, 3 LinkedIn posts and 2 other formats">
+      <g class="lab"><text x="0" y="24">YouTube Shorts</text><text x="0" y="64">Instagram Reels</text><text x="0" y="104">LinkedIn posts</text><text x="0" y="144">Other formats</text></g>
+      <rect x="130" y="10" width="300" height="20" rx="4" fill="var(--track)"/><rect class="grow" x="130" y="10" width="240" height="20" rx="4" fill="var(--ink)" data-tip="<b>YouTube Shorts</b><br>~4 per long-form video"/>
+      <rect x="130" y="50" width="300" height="20" rx="4" fill="var(--track)"/><rect class="grow" x="130" y="50" width="240" height="20" rx="4" fill="var(--ink)" data-tip="<b>Instagram Reels</b><br>~4 per long-form video"/>
+      <rect x="130" y="90" width="300" height="20" rx="4" fill="var(--track)"/><rect class="grow" x="130" y="90" width="180" height="20" rx="4" fill="var(--grey)" data-tip="<b>LinkedIn posts</b><br>~3 per long-form video"/>
+      <rect x="130" y="130" width="300" height="20" rx="4" fill="var(--track)"/><rect class="grow" x="130" y="130" width="120" height="20" rx="4" fill="var(--grey)" data-tip="<b>Other formats</b><br>~2 per long-form video"/>
+      <g class="labb"><text x="380" y="25">4</text><text x="380" y="65">4</text><text x="320" y="105">3</text><text x="260" y="145">2</text></g>
+    </svg>
+    <p class="note">Illustrative — ~13 pieces of content from a single shoot.</p>
+  </div>
+</section>
+
+<!-- ============ 03 INSTAGRAM ============ -->
+<section class="row r-13" id="s03">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 3</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Instagram</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">03.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Instagram</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 20px">Make complex technology <span class="mute">easy to understand.</span></h3>
+    <p class="lede" style="max-width:64ch;margin-bottom:24px">Instagram can be used as a creative product-discovery channel. Instead of simply explaining features, the objective should be to make people understand the problems Hunar solves through relatable, engaging content.</p>
+    <div class="plate p-arc" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide rv" style="background:var(--white)">
+    <div class="chrome" style="margin-bottom:clamp(24px,3vw,40px)"><span style="font-size:clamp(22px,2vw,28px);color:var(--ink);letter-spacing:-.03em">Content Directions</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="cols cols-5">
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">01.</div></div><h4 class="h3" style="font-size:21px">Human vs AI HR</h4><p style="font-size:14px;color:var(--ink-2)">Show how AI and human teams approach the same task.</p><div class="plate p-stripe" aria-hidden="true"></div></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">02.</div></div><h4 class="h3" style="font-size:21px">AI HR in Real Life</h4><p style="font-size:14px;color:var(--ink-2)">Demonstrate actual product capabilities.</p><div class="plate p-stripe2" aria-hidden="true"></div></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">03.</div></div><h4 class="h3" style="font-size:21px">Things HR Teams Shouldn't Do Manually</h4><p style="font-size:14px;color:var(--ink-2)">Highlight repetitive tasks that can be automated.</p><div class="plate p-grid" aria-hidden="true"></div></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">04.</div></div><h4 class="h3" style="font-size:21px">One Problem. One AI Solution.</h4><p style="font-size:14px;color:var(--ink-2)">Turn everyday HR challenges into simple product stories.</p><div class="plate p-sky" aria-hidden="true"></div></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">05.</div></div><h4 class="h3" style="font-size:21px">POV: 5,000 Candidates. Three Recruiters.</h4><p style="font-size:14px;color:var(--ink-2)">Use relatable workplace situations to introduce Hunar's solutions.</p><div class="plate p-stripe" aria-hidden="true"></div></div>
+    </div>
+    <div class="chrome bot"><span class="brand" style="font-weight:400;color:var(--ink-3)"><svg class="star" style="color:var(--ink)"><use href="#star"/></svg>Instagram · Content Directions</span><span class="pg">Proposal<b>P.05</b></span></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <div class="body"><p>The content should combine polished short-form videos, motion graphics, relatable storytelling and clear product demonstrations.</p></div>
+    <p class="display" style="font-size:clamp(36px,4.2vw,62px);margin-top:28px">The goal is to make Hunar's technology accessible <span class="mute">without compromising its credibility.</span></p>
+    <div class="chrome bot"><span>Instagram</span><span class="pg">Proposal<b>P.06</b></span></div>
+  </div>
+  <div class="slide dark rv">
+    <div class="fig-head"><div><div class="fig-title">POV: 5,000 candidates. Three recruiters.</div><div class="fig-sub">What the manual workload looks like</div></div></div>
+    <div class="stats stats-3">
+      <div class="stat"><div class="v">1,667</div><div class="k">candidates per recruiter</div></div>
+      <div class="stat"><div class="v">833<span class="mute">h</span></div><div class="k">of first-round calls in total</div></div>
+      <div class="stat"><div class="v">~35</div><div class="k">working days, per recruiter</div></div>
+    </div>
+    <svg class="chart" viewBox="0 0 520 120" style="margin-top:28px" role="img" aria-label="Each of three recruiters carries about 278 hours of calling">
+      <g class="lab"><text x="0" y="26">Recruiter 1</text><text x="0" y="62">Recruiter 2</text><text x="0" y="98">Recruiter 3</text></g>
+      <rect class="grow" x="96" y="12" width="420" height="22" rx="4" fill="#F6B99C" data-tip="<b>Recruiter 1</b><br>1,667 candidates · ~278 hours"/>
+      <rect class="grow" x="96" y="48" width="420" height="22" rx="4" fill="#F6B99C" data-tip="<b>Recruiter 2</b><br>1,667 candidates · ~278 hours"/>
+      <rect class="grow" x="96" y="84" width="420" height="22" rx="4" fill="#F6B99C" data-tip="<b>Recruiter 3</b><br>1,667 candidates · ~278 hours"/>
+      <g font-family="Inter Tight, sans-serif" font-size="11.5" font-weight="600" fill="#0F1D45" text-anchor="end"><text x="506" y="27">~278 HRS</text><text x="506" y="63">~278 HRS</text><text x="506" y="99">~278 HRS</text></g>
+    </svg>
+    <p class="note">Assumes ~10 min per first-round call, 8-hour days. A content hook, not a claim.</p>
+  </div>
+</section>
+
+<!-- ============ 04 LINKEDIN ============ -->
+<section class="row r-13" id="s04">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 4</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">LinkedIn</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">04.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>LinkedIn</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 28px">Turn the people behind Hunar into <span class="mute">brand advocates.</span></h3>
+    <div class="plate p-grid" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <div class="body">
+      <p>LinkedIn should extend beyond the company page. The founders, leadership team, employees and customer-facing teams can collectively help build Hunar's visibility and credibility.</p>
+      <p>Each person can contribute through their own perspective and expertise.</p>
+      <ul class="bul" style="margin-top:18px">
+        <li>Founders sharing company vision, industry insights and product thinking.</li>
+        <li>Product and engineering teams sharing technology stories and innovations.</li>
+        <li>Sales and customer-facing teams sharing industry observations and customer challenges.</li>
+        <li>Employees sharing their experiences and perspectives on the future of work.</li>
+      </ul>
+      <p style="margin-top:18px">Rather than publishing identical posts across every account, each person's content should have an authentic voice while contributing to a consistent brand narrative.</p>
+    </div>
+    <p class="pull" style="margin-top:28px;padding-top:22px;border-top:1px solid var(--ink)">The idea is to expand Hunar's reach through people, <span class="mute">not just its company page.</span></p>
+    <div class="chrome bot"><span>LinkedIn</span><span class="pg">Proposal<b>P.07</b></span></div>
+  </div>
+  <div class="slide rv" style="background:var(--white)">
+    <div class="fig-head"><div><div class="fig-title">Reach through people</div><div class="fig-sub">Potential audience · company page = 1×</div></div><svg class="arr"><use href="#sw"/></svg></div>
+    <svg class="chart" viewBox="0 0 520 340" role="img" aria-label="Illustrative: reach grows from 1x with the company page to 3x with founders, 5x with product, engineering and sales, 10x with employees">
+      <line class="gl" x1="40" x2="510" y1="20" y2="20"/><line class="gl" x1="40" x2="510" y1="90" y2="90"/><line class="gl" x1="40" x2="510" y1="160" y2="160"/><line class="gl" x1="40" x2="510" y1="230" y2="230"/><line x1="40" x2="510" y1="280" y2="280" stroke="var(--ink-3)"/>
+      <g class="ax"><text x="4" y="24">10×</text><text x="12" y="94">7×</text><text x="12" y="164">4×</text><text x="12" y="234">1×</text></g>
+      <rect class="growy" x="66" y="254" width="80" height="26" rx="4" fill="var(--grey)" data-tip="<b>Company page</b><br>Baseline reach · 1×"/>
+      <rect class="growy" x="176" y="207" width="80" height="73" rx="4" fill="var(--grey)" data-tip="<b>+ Founders</b><br>≈ 3× the company page alone"/>
+      <rect class="growy" x="286" y="160" width="80" height="120" rx="4" fill="var(--ink)" data-tip="<b>+ Product, engineering &amp; sales</b><br>≈ 5×"/>
+      <rect class="growy" x="396" y="45" width="80" height="235" rx="4" fill="var(--ink)" data-tip="<b>+ Employees</b><br>≈ 10× — every voice adds a network"/>
+      <g class="labb" text-anchor="middle"><text x="106" y="246">1×</text><text x="216" y="199">3×</text><text x="326" y="152">5×</text><text x="436" y="37">10×</text></g>
+      <g class="lab" text-anchor="middle" font-size="11.5"><text x="106" y="300">Company</text><text x="106" y="315">page</text><text x="216" y="300">+ Founders</text><text x="326" y="300">+ Product,</text><text x="326" y="315">eng &amp; sales</text><text x="436" y="300">+ Employees</text></g>
+    </svg>
+    <p class="note">Illustrative — multiplier depends on team size and posting cadence.</p>
+  </div>
+</section>
+
+<!-- ============ 05 COMMUNITY ============ -->
+<section class="row r-13" id="s05">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 5</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Community-led<br>campaign</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">05.</span></div>
+  </div>
+  <div class="slide rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Community-led campaign</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="r-11" style="display:grid;gap:clamp(24px,3vw,40px);margin-top:clamp(24px,3vw,40px);align-items:center">
+      <div>
+        <h3 class="display" style="font-size:clamp(48px,6.4vw,96px)">Can Hunar <span class="mute">handle this?</span></h3>
+        <div class="body" style="margin-top:24px">
+          <p>An interactive campaign that invites HR professionals, recruiters and business owners to share their most repetitive or time-consuming hiring challenges.</p>
+          <p>Hunar can select interesting submissions and demonstrate how its AI agents could handle those challenges.</p>
+        </div>
+      </div>
+      <svg class="chart" viewBox="0 0 440 440" role="img" aria-label="A continuous loop: submit a challenge, Hunar demonstrates, feature contributors, invite the next challenge">
+        <circle cx="220" cy="220" r="150" fill="none" stroke="var(--line)" stroke-width="2"/>
+        <circle class="draw" cx="220" cy="220" r="150" fill="none" stroke="#E58FA8" stroke-width="2" transform="rotate(-90 220 220)" style="--len:943"/>
+        <circle cx="220" cy="220" r="84" fill="var(--ink)"/>
+        <text x="220" y="214" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="22" fill="#fff">Continuous</text>
+        <text x="220" y="240" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="22" fill="#F6B99C">content loop</text>
+        <g font-family="Inter Tight, sans-serif" font-size="13.5" font-weight="500" text-anchor="middle">
+          <rect x="150" y="50" width="140" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="220" y="75">01. Submit</text>
+          <rect x="300" y="200" width="136" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="368" y="225">02. Demonstrate</text>
+          <rect x="150" y="350" width="140" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="220" y="375">03. Feature</text>
+          <rect x="4" y="200" width="136" height="40" rx="20" fill="var(--ink)"/><text x="72" y="225" fill="#fff">04. Invite next</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide rv" style="background:var(--white)">
+    <div class="chrome" style="margin-bottom:clamp(24px,3vw,36px)"><span style="font-size:clamp(22px,2vw,28px);color:var(--ink);letter-spacing:-.03em">The campaign could include:</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="cols cols-5" style="grid-template-columns:repeat(4,minmax(0,1fr))">
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">01.</div></div><p style="font-size:15.5px">People submitting real HR and hiring challenges.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">02.</div></div><p style="font-size:15.5px">Hunar demonstrating how its technology approaches them.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">03.</div></div><p style="font-size:15.5px">Featuring contributors and their experiences.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">04.</div></div><p style="font-size:15.5px">Inviting audiences to submit the next challenge.</p></div>
+    </div>
+    <p class="pull" style="margin-top:36px;padding-top:24px;border-top:1px solid var(--ink)">This creates a continuous source of content <span class="mute">while encouraging people to discover and interact with the product.</span></p>
+    <div class="chrome bot"><span>Community-led campaign</span><span class="pg">Proposal<b>P.08</b></span></div>
+  </div>
+</section>
+
+<!-- ============ 06 CREATORS ============ -->
+<section class="row r-13" id="s06">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 6</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Creator<br>collaborations</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">06.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Creator collaborations</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 28px">Let the right people <span class="mute">experience the product.</span></h3>
+    <div class="plate p-stripe2" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <div class="body">
+      <p>Collaborate with creators and professionals who already have credibility within the HR, recruitment and technology ecosystem.</p>
+      <p style="color:var(--ink);font-weight:500;margin-top:20px">Potential collaboration categories:</p>
+      <ul class="bul" style="margin-top:10px">
+        <li>HR and recruitment creators.</li>
+        <li>Talent acquisition professionals.</li>
+        <li>HR consultants and industry experts.</li>
+        <li>Startup founders and business leaders.</li>
+        <li>AI and technology creators.</li>
+      </ul>
+      <p style="margin-top:18px">Possible formats include recruiters experiencing an AI HR agent, creators testing a real hiring workflow, and conversations around the future of HR.</p>
+    </div>
+    <p class="pull" style="margin-top:28px;padding-top:22px;border-top:1px solid var(--ink)">The focus should be on relevance and credibility <span class="mute">rather than follower count alone.</span></p>
+    <div class="chrome bot"><span>Creator collaborations</span><span class="pg">Proposal<b>P.09</b></span></div>
+  </div>
+  <div class="slide rv" style="background:var(--white)">
+    <div class="fig-head"><div><div class="fig-title">Relevance over reach</div><div class="fig-sub">Where the right collaborators sit</div></div>
+      <div class="legend"><span><i style="background:var(--ink);height:9px;width:9px;border-radius:50%"></i>Priority</span><span><i style="background:var(--grey);height:9px;width:9px;border-radius:50%"></i>Lower fit</span></div></div>
+    <svg class="chart" viewBox="0 0 520 380" role="img" aria-label="Illustrative 2x2: audience relevance versus follower count; HR creators, TA professionals, consultants, founders and AI creators sit in the high-relevance half">
+      <rect x="270" y="20" width="240" height="160" rx="8" fill="var(--paper)"/>
+      <rect x="40" y="20" width="230" height="160" rx="8" fill="var(--paper)" opacity=".6"/>
+      <line class="gl" x1="40" x2="510" y1="180" y2="180"/><line class="gl" x1="270" x2="270" y1="20" y2="340"/>
+      <line x1="40" x2="510" y1="340" y2="340" stroke="var(--ink-3)"/><line x1="40" x2="40" y1="20" y2="340" stroke="var(--ink-3)"/>
+      <text class="ax" x="275" y="362" text-anchor="middle">FOLLOWER COUNT →</text>
+      <text class="ax" x="-180" y="24" transform="rotate(-90)" text-anchor="middle">RELEVANCE →</text>
+      <text class="ax" x="500" y="38" text-anchor="end" style="fill:var(--ink);font-weight:600">IDEAL</text>
+      <text class="ax" x="54" y="38" style="fill:var(--ink);font-weight:600">HIGH-TRUST NICHE</text>
+      <text class="ax" x="500" y="330" text-anchor="end">REACH WITHOUT FIT</text>
+      <g stroke="#fff" stroke-width="2">
+        <circle cx="120" cy="80" r="11" fill="var(--ink)" data-tip="<b>Talent acquisition professionals</b><br>Highest relevance, focused audience"/>
+        <circle cx="190" cy="125" r="11" fill="var(--ink)" data-tip="<b>HR consultants &amp; industry experts</b><br>Trusted advisors to buyers"/>
+        <circle cx="330" cy="70" r="13" fill="var(--ink)" data-tip="<b>HR &amp; recruitment creators</b><br>Relevance and reach at once"/>
+        <circle cx="400" cy="125" r="13" fill="var(--ink)" data-tip="<b>Startup founders &amp; business leaders</b><br>Peers of the decision-makers"/>
+        <circle cx="462" cy="150" r="13" fill="var(--ink)" data-tip="<b>AI &amp; technology creators</b><br>Reach with a tech-curious audience"/>
+        <circle cx="440" cy="280" r="15" fill="var(--grey)" data-tip="<b>General lifestyle influencers</b><br>Big numbers, low fit"/>
+        <circle cx="330" cy="300" r="12" fill="var(--grey)" data-tip="<b>Generic meme pages</b><br>Reach without credibility"/>
+      </g>
+      <g class="lab" font-size="11.5"><text x="136" y="72">TA pros</text><text x="206" y="117">Consultants</text><text x="346" y="62">HR creators</text><text x="382" y="150" text-anchor="end">Founders</text><text x="462" y="178" text-anchor="middle">AI creators</text></g>
+    </svg>
+    <p class="note">Illustrative positioning — hover a dot for detail.</p>
+  </div>
+</section>
+
+<!-- ============ 07 OFFLINE ============ -->
+<section class="row r-13" id="s07">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 7</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Offline brand<br>experiences</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">07.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Offline brand experiences</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 20px">Take Hunar <span class="mute">beyond the screen.</span></h3>
+    <p class="lede" style="max-width:56ch;margin-bottom:24px">Hunar's technology can become much more memorable when people get to experience it themselves.</p>
+    <div class="plate p-tree" aria-hidden="true" style="background-position:center 30%"></div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide rv" style="background:var(--white)">
+    <div class="chrome" style="margin-bottom:clamp(24px,3vw,40px)"><span style="font-size:clamp(22px,2vw,28px);color:var(--ink);letter-spacing:-.03em">Experiences</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="cols cols-3">
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">01.</div><div class="t">AI HR Experience Booth</div></div></div>
+        <p style="font-size:15px;color:var(--ink-2)">An interactive booth where visitors can speak directly with Hunar's AI HR agent through a live call or QR-based experience.</p>
+        <div class="plate p-stripe" aria-hidden="true"></div>
+      </div>
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">02.</div><div class="t">The Hiring Bottleneck</div></div></div>
+        <p style="font-size:15px;color:var(--ink-2)">A campaign built around a simple question:</p>
+        <p class="h3" style="font-size:24px">10,000 candidates. 3 recruiters. <span class="mute">Who's calling everyone?</span></p>
+        <p style="font-size:15px;color:var(--ink-2)">Use this idea at relevant industry events to demonstrate the scale of hiring challenges and how Hunar can help.</p>
+        <div class="plate p-stripe2" aria-hidden="true"></div>
+      </div>
+      <div class="col">
+        <div class="col-head"><svg class="arr"><use href="#ne"/></svg><div><div class="n">03.</div><div class="t">Future of HR Roundtable</div></div></div>
+        <p style="font-size:15px;color:var(--ink-2)">Bring together CHROs, HR leaders, recruiters and founders for conversations around AI and the future of workforce management.</p>
+        <div class="plate p-grid" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="chrome bot"><span class="brand" style="font-weight:400;color:var(--ink-3)"><svg class="star" style="color:var(--ink)"><use href="#star"/></svg>Offline brand experiences</span><span class="pg">Proposal<b>P.10</b></span></div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide dark rv">
+    <div class="fig-head">
+      <div><div class="fig-title">Who's calling everyone? The math behind the bottleneck</div><div class="fig-sub">10,000 candidates · 3 recruiters · first-round calls only</div></div>
+      <div class="legend"><span><i style="background:var(--peach)"></i>Candidates still waiting</span></div>
+    </div>
+    <svg class="chart" viewBox="0 0 1000 260" role="img" aria-label="Illustrative: at 80 calls per recruiter per day, 3 recruiters take about 42 working days to call 10,000 candidates">
+      <defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE9DB5" stop-opacity=".35"/><stop offset="1" stop-color="#F6B99C" stop-opacity="0"/></linearGradient></defs>
+      <line class="gl" x1="70" x2="980" y1="20" y2="20"/><line class="gl" x1="70" x2="980" y1="70" y2="70"/><line class="gl" x1="70" x2="980" y1="120" y2="120"/><line class="gl" x1="70" x2="980" y1="170" y2="170"/><line x1="70" x2="980" y1="220" y2="220" stroke="#3A4A80"/>
+      <g class="ax" text-anchor="end"><text x="60" y="24">10,000</text><text x="60" y="74">7,500</text><text x="60" y="124">5,000</text><text x="60" y="174">2,500</text><text x="60" y="224">0</text></g>
+      <g class="ax" text-anchor="middle"><text x="70" y="246">DAY 0</text><text x="288" y="246">DAY 10</text><text x="506" y="246">DAY 20</text><text x="724" y="246">DAY 30</text><text x="942" y="246">DAY 40</text></g>
+      <path d="M70,20 L979,220 L70,220 Z" fill="url(#ga)"/>
+      <path class="draw" d="M70,20 L979,220" stroke="#F6B99C" stroke-width="2.5" fill="none"/>
+      <circle cx="979" cy="220" r="6" fill="#F7D58B" stroke="var(--ink)" stroke-width="2"/>
+      <text x="960" y="120" text-anchor="end" font-family="Inter Tight, sans-serif" font-size="30" letter-spacing="-1" fill="#fff">~42 working days</text>
+      <line id="bn-x" x1="0" x2="0" y1="20" y2="220" stroke="#fff" stroke-opacity=".4" stroke-dasharray="3 4" style="display:none"/>
+      <circle id="bn-d" r="5" fill="#fff" style="display:none"/>
+      <rect class="hit" id="bn-hit" x="70" y="10" width="910" height="215"/>
+    </svg>
+    <p class="note">Assumes 80 screening calls per recruiter per day (240/day). Hover the line to scrub.</p>
+    <p class="pull" style="margin-top:36px;padding-top:24px;border-top:1px solid var(--d-line)">These experiences can generate real-world interactions, industry relationships, content opportunities <span class="mute">and qualified business conversations.</span></p>
+  </div>
+</section>
+
+<!-- ============ 08 GROWTH ============ -->
+<section class="row r-13" id="s08">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 8</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Growth &amp;<br>distribution</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">08.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Growth &amp; distribution</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(44px,6.4vw,96px);margin:clamp(24px,3vw,40px) 0 20px">Turn content into a <span class="mute">consistent growth engine.</span></h3>
+    <p class="lede" style="max-width:60ch;margin-bottom:24px">Content creation should not operate in isolation. Every major piece of content should contribute to a wider distribution and customer acquisition strategy.</p>
+    <div class="plate p-arch" aria-hidden="true"></div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <p class="small">One idea. Multiple distribution channels.</p>
+    <p style="margin-top:16px;color:var(--ink-2)">A single long-form video can generate:</p>
+    <ul class="bul" style="margin-top:12px">
+      <li>YouTube Shorts and Instagram Reels.</li>
+      <li>LinkedIn posts from founders and employees.</li>
+      <li>Educational carousels and product explainers.</li>
+      <li>Sales enablement content.</li>
+      <li>Website and campaign assets.</li>
+    </ul>
+    <div class="chrome bot"><span>Growth &amp; distribution</span><span class="pg">Proposal<b>P.11</b></span></div>
+  </div>
+  <div class="slide rv" style="background:var(--white);justify-content:center">
+    <svg class="chart" viewBox="0 0 520 330" role="img" aria-label="Diagram: one long-form video fans out into five distribution outputs">
+      <g fill="none" stroke="var(--ink)" stroke-width="1.2">
+        <path class="draw" d="M150,165 C250,165 250,35 330,35"/>
+        <path class="draw" d="M150,165 C250,165 250,100 330,100"/>
+        <path class="draw" d="M150,165 L330,165"/>
+        <path class="draw" d="M150,165 C250,165 250,230 330,230"/>
+        <path class="draw" d="M150,165 C250,165 250,295 330,295"/>
+      </g>
+      <rect x="10" y="110" width="140" height="110" rx="14" fill="var(--ink)"/>
+      <polygon points="68,140 68,172 94,156" fill="#F7D58B"/>
+      <text x="80" y="200" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="10.5" letter-spacing="1.2" fill="#8590AD">LONG-FORM</text>
+      <g font-family="Inter Tight, sans-serif" font-size="13" font-weight="500">
+        <rect x="330" y="15" width="185" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="348" y="40">Shorts &amp; Reels</text>
+        <rect x="330" y="80" width="185" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="348" y="105">Founder &amp; team posts</text>
+        <rect x="330" y="145" width="185" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="348" y="170">Carousels &amp; explainers</text>
+        <rect x="330" y="210" width="185" height="40" rx="20" fill="#fff" stroke="var(--line)"/><text x="348" y="235">Sales enablement</text>
+        <rect x="330" y="275" width="185" height="40" rx="20" fill="var(--ink)" stroke="#F6B99C"/><text x="348" y="300" fill="#fff">Website &amp; campaigns</text>
+      </g>
+    </svg>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <p class="small">The growth funnel</p>
+    <div class="flow" style="margin-top:18px">
+      <span>Awareness</span><b>→</b><span>Engagement</span><b>→</b><span>Product Discovery</span><b>→</b><span>Demo Booking</span><b>→</b><span>Qualified Lead</span><b>→</b><span class="g">Sales Conversation</span>
+    </div>
+    <p class="pull" style="margin-top:32px;font-size:clamp(20px,1.8vw,25px)">Paid distribution can then amplify the strongest content, reach relevant business decision-makers, promote customer stories and product demonstrations, <span class="mute">and retarget audiences who have already shown interest.</span></p>
+    <div class="chrome bot"><span>Growth funnel</span><span class="pg">Proposal<b>P.12</b></span></div>
+  </div>
+  <div class="slide rv" style="background:var(--white)">
+    <div class="fig-head"><div><div class="fig-title">From attention to pipeline</div><div class="fig-sub">Share of audience at each stage · illustrative</div></div>
+      <div class="legend"><span><i style="background:var(--grey)"></i>Brand</span><span><i style="background:var(--ink)"></i>Pipeline</span></div></div>
+    <div class="funnel">
+      <div class="fstep"><span>Awareness</span><span class="tr"><i class="grow" style="width:100%" data-tip="<b>Awareness</b><br>100% — everyone who sees the content"></i></span><span class="pc">100%</span></div>
+      <div class="fstep"><span>Engagement</span><span class="tr"><i class="grow" style="width:38%" data-tip="<b>Engagement</b><br>~38% watch, react, follow"></i></span><span class="pc">38%</span></div>
+      <div class="fstep"><span>Product Discovery</span><span class="tr"><i class="grow" style="width:14%" data-tip="<b>Product Discovery</b><br>~14% visit the site or product"></i></span><span class="pc">14%</span></div>
+      <div class="fstep"><span>Demo Booking</span><span class="tr"><i class="grow" style="width:4.2%" data-tip="<b>Demo Booking</b><br>~4.2% book a demo"></i></span><span class="pc">4.2%</span></div>
+      <div class="fstep"><span>Qualified Lead</span><span class="tr"><i class="grow" style="width:2.6%" data-tip="<b>Qualified Lead</b><br>~2.6% match the ideal customer profile"></i></span><span class="pc">2.6%</span></div>
+      <div class="fstep"><span>Sales Conversation</span><span class="tr"><i class="grow" style="width:1.6%" data-tip="<b>Sales Conversation</b><br>~1.6% reach sales"></i></span><span class="pc">1.6%</span></div>
+    </div>
+    <p class="note">Illustrative rates — real benchmarks get set in the first 60 days.</p>
+  </div>
+</section>
+<section class="row">
+  <div class="slide dark rv">
+    <div class="chrome" style="margin-bottom:clamp(24px,3vw,40px)"><span style="font-size:clamp(22px,2vw,28px);color:var(--d-text);letter-spacing:-.03em">What we measure</span><svg class="arr"><use href="#sw"/></svg></div>
+    <div class="cols cols-5">
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">01.</div></div><p style="font-size:15.5px">Qualified leads and demo bookings.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">02.</div></div><p style="font-size:15.5px">Cost per lead and lead quality.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">03.</div></div><p style="font-size:15.5px">Website traffic and conversion rates.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">04.</div></div><p style="font-size:15.5px">Audience growth and engagement quality.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">05.</div></div><p style="font-size:15.5px">Contribution to the sales pipeline.</p></div>
+    </div>
+    <p class="display" style="font-size:clamp(34px,4.4vw,64px);margin-top:clamp(40px,5vw,72px);max-width:22ch">The objective is not just to grow visibility, but to connect marketing activity with <span class="mute">actual business outcomes.</span></p>
+    <div class="chrome bot"><span>What we measure</span><span class="pg">Proposal<b>P.13</b></span></div>
+  </div>
+</section>
+
+<!-- ============ 09 FUNCTION ============ -->
+<section class="row r-13" id="s09">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 9</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Building the<br>marketing function</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">09.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Building the marketing function</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(40px,5.6vw,86px);margin:clamp(24px,3vw,40px) 0 20px">Not just managing marketing. <span class="mute">Building the entire function.</span></h3>
+    <div class="body" style="max-width:66ch">
+      <p>If given the opportunity, I'd like to take ownership of establishing and growing Hunar's marketing function from the ground up.</p>
+      <p>This means building the foundation, setting the direction and creating the systems that allow marketing to scale alongside the business.</p>
+    </div>
+  </div>
+</section>
+<section class="row">
+  <div class="slide rv" style="background:var(--white)">
+    <div class="cols cols-5">
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">01.</div></div><div class="small" style="color:var(--ink)">Brand Foundation</div><div class="fn-bar"><i style="width:20%"></i></div><p style="font-size:14px;color:var(--ink-2)">Establish clear product positioning, target audiences, brand narrative, messaging and creative direction.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">02.</div></div><div class="small" style="color:var(--ink)">Content Infrastructure</div><div class="fn-bar"><i style="width:40%"></i></div><p style="font-size:14px;color:var(--ink-2)">Build content pillars, recurring formats, production workflows and publishing calendars.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">03.</div></div><div class="small" style="color:var(--ink)">Distribution System</div><div class="fn-bar"><i style="width:60%"></i></div><p style="font-size:14px;color:var(--ink-2)">Develop organic distribution, LinkedIn advocacy, creator partnerships and paid acquisition.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">04.</div></div><div class="small" style="color:var(--ink)">Growth &amp; Analytics</div><div class="fn-bar"><i style="width:80%"></i></div><p style="font-size:14px;color:var(--ink-2)">Work on landing pages, tracking, reporting, lead quality and conversion optimisation.</p></div>
+      <div class="col"><div class="col-head"><svg class="arr"><use href="#ne"/></svg><div class="n">05.</div></div><div class="small" style="color:var(--ink)">Experimentation &amp; Scale</div><div class="fn-bar"><i style="width:100%"></i></div><p style="font-size:14px;color:var(--ink-2)">Continuously test new ideas, identify what works and scale activities that contribute to business growth.</p></div>
+    </div>
+
+    <div style="margin-top:clamp(40px,5vw,64px);padding-top:28px;border-top:1px solid var(--line)">
+      <div class="fig-head"><div><div class="fig-title">How the function layers up</div><div class="fig-sub">Indicative sequencing over the first 12 months</div></div>
+        <div class="legend"><span><i style="background:var(--ink)"></i>Build</span><span><i style="background:var(--grey)"></i>Run &amp; scale</span></div></div>
+      <svg class="chart" viewBox="0 0 1000 290" role="img" aria-label="Indicative roadmap: brand foundation months 1 to 2, content infrastructure from month 2, distribution and analytics from month 3, experimentation from month 5 onwards">
+        <line class="gl" x1="220" x2="220" y1="10" y2="250"/><line class="gl" x1="410" x2="410" y1="10" y2="250"/><line class="gl" x1="600" x2="600" y1="10" y2="250"/><line class="gl" x1="790" x2="790" y1="10" y2="250"/><line class="gl" x1="980" x2="980" y1="10" y2="250"/>
+        <g class="ax" text-anchor="middle"><text x="315" y="274">Q1</text><text x="505" y="274">Q2</text><text x="695" y="274">Q3</text><text x="885" y="274">Q4</text></g>
+        <g class="lab"><text x="0" y="40">Brand Foundation</text><text x="0" y="88">Content Infrastructure</text><text x="0" y="136">Distribution System</text><text x="0" y="184">Growth &amp; Analytics</text><text x="0" y="232">Experimentation &amp; Scale</text></g>
+        <rect class="grow" x="220" y="24" width="126" height="24" rx="4" fill="var(--ink)" data-tip="<b>Brand Foundation</b><br>Months 1–2: positioning, narrative, creative direction"/>
+        <rect class="grow" x="348" y="24" width="632" height="24" rx="4" fill="var(--track)" data-tip="<b>Brand Foundation</b><br>Ongoing: guardrails &amp; refinement"/>
+        <rect class="grow" x="283" y="72" width="190" height="24" rx="4" fill="var(--ink)" data-tip="<b>Content Infrastructure</b><br>Months 2–4: pillars, formats, workflows"/>
+        <rect class="grow" x="475" y="72" width="505" height="24" rx="4" fill="var(--grey)" data-tip="<b>Content Infrastructure</b><br>Months 5–12: publishing calendar at full cadence"/>
+        <rect class="grow" x="346" y="120" width="190" height="24" rx="4" fill="var(--ink)" data-tip="<b>Distribution System</b><br>Months 3–5: advocacy, creators, first paid tests"/>
+        <rect class="grow" x="538" y="120" width="442" height="24" rx="4" fill="var(--grey)" data-tip="<b>Distribution System</b><br>Months 6–12: scale what converts"/>
+        <rect class="grow" x="346" y="168" width="126" height="24" rx="4" fill="var(--ink)" data-tip="<b>Growth &amp; Analytics</b><br>Months 3–4: tracking, landing pages, reporting"/>
+        <rect class="grow" x="474" y="168" width="506" height="24" rx="4" fill="var(--grey)" data-tip="<b>Growth &amp; Analytics</b><br>Months 5–12: lead quality &amp; conversion optimisation"/>
+        <rect class="grow" x="473" y="216" width="507" height="24" rx="4" fill="var(--grey)" data-tip="<b>Experimentation &amp; Scale</b><br>Month 5 onwards: test, learn, scale"/>
+      </svg>
+      <p class="note">Indicative — sequencing to be agreed with the team.</p>
+    </div>
+    <p class="pull" style="margin-top:36px;padding-top:24px;border-top:1px solid var(--ink)">My approach is to take ownership from the first idea and creative direction to execution, distribution <span class="mute">and the final metric.</span></p>
+    <div class="chrome bot"><span class="brand" style="font-weight:400;color:var(--ink-3)"><svg class="star" style="color:var(--ink)"><use href="#star"/></svg>Building the marketing function</span><span class="pg">Proposal<b>P.14</b></span></div>
+  </div>
+</section>
+
+<!-- ============ 10 WHY ME ============ -->
+<section class="row r-13" id="s10">
+  <div class="slide dark title-card rv">
+    <div class="chrome"><span class="pill" style="color:var(--d-text)">Part 10</span><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI</span></div>
+    <h2 class="caps" style="margin-top:40px">Why me?</h2>
+    <div class="bottom"><svg class="arr lg"><use href="#ne"/></svg><span class="numeral">10.</span></div>
+  </div>
+  <div class="slide statement rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Why me?</span><svg class="arr"><use href="#sw"/></svg></div>
+    <h3 class="display" style="font-size:clamp(48px,7vw,104px);margin:clamp(24px,3vw,40px) 0 28px">A marketer who thinks <span class="mute">like a builder.</span></h3>
+    <div class="stats stats-4" style="margin-top:auto">
+      <div class="stat"><div class="v">6<span class="mute">+</span></div><div class="k">Years of experience</div></div>
+      <div class="stat"><div class="v">6</div><div class="k">Disciplines, content to growth</div></div>
+      <div class="stat"><div class="v">Co<span class="mute">-</span></div><div class="k">Founded ventures</div></div>
+      <div class="stat"><div class="v">₹<span class="mute">↗</span></div><div class="k">RabbleHub now generating revenue</div></div>
+    </div>
+  </div>
+</section>
+<section class="row r-11">
+  <div class="slide rv">
+    <div class="body">
+      <p>I bring over six years of experience across content, SEO, brand building, performance marketing, customer acquisition and business growth.</p>
+      <p>I've worked across different business environments, co-founded ventures, built marketing initiatives from scratch, led teams and managed campaigns from strategy through execution.</p>
+      <p>At GooCampus, I led marketing across multiple education products, managed paid acquisition and worked with a cross-functional team.</p>
+      <p>Currently, as the Founding Marketing Lead at RabbleHub, I'm building the marketing function from the ground up, working across brand positioning, growth strategy, customer acquisition and sales. We've recently started generating revenue.</p>
+    </div>
+    <div class="chrome bot"><span>Why me?</span><span class="pg">Proposal<b>P.15</b></span></div>
+  </div>
+  <div class="slide rv">
+    <div class="body">
+      <p>My entrepreneurial experience has also taught me to work with limited resources, take ownership and understand how marketing connects with the larger business.</p>
+      <p>I'm particularly interested in AI and the way technology is changing how businesses operate. Hunar presents an opportunity to bring my existing marketing experience into a space I'm genuinely excited about.</p>
+    </div>
+    <p class="pull" style="margin-top:28px;padding-top:22px;border-top:1px solid var(--ink)">I'd like to contribute not just by executing campaigns, but by helping build a brand and marketing function <span class="mute">that grows with the business.</span></p>
+    <div class="chrome bot"><span>Why me?</span><span class="pg">Proposal<b>P.16</b></span></div>
+  </div>
+</section>
+
+<!-- ============ CLOSE ============ -->
+<section class="row r-31">
+  <div class="slide dark close rv">
+    <div class="chrome"><span class="brand"><svg class="star"><use href="#star"/></svg>Hunar AI × Sramana Giri</span><svg class="arr lg"><use href="#nw"/></svg></div>
+    <h2 class="display" style="max-width:12ch;margin-block:40px">Let's build something <span class="mute">worth talking about.</span></h2>
+    <div class="sig">
+      <span class="av">S</span>
+      <div>Sramana Giri<small>Brand, Content &amp; Growth Marketing</small></div>
+      <a class="btn" href="https://sramanagiri99-creates.github.io/portfolio/" target="_blank" rel="noopener">Explore my portfolio ↗</a>
+    </div>
+  </div>
+  <div class="slide flush rv"><div class="plate p-arc" style="height:100%;min-height:260px;border-radius:0" aria-hidden="true"></div></div>
+</section>
+
+<footer>
+  <span>A proposal for Hunar AI by Sramana Giri · Charts marked illustrative are projections, not data.</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+</main>
+
+<div id="tip" role="tooltip"></div>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  document.querySelectorAll('path.draw, line.draw').forEach(function(p){
+    if(p.style.getPropertyValue('--len')) return;
+    try{ p.style.setProperty('--len', Math.ceil(p.getTotalLength())); }catch(e){}
+  });
+
+  var tip = document.getElementById('tip');
+  function place(x,y){
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = Math.min(window.innerWidth - w - 12, Math.max(12, x + 14)) + 'px';
+    var top = y - h - 14; if(top < 12) top = y + 18;
+    tip.style.top = top + 'px';
+  }
+  function show(html,x,y){ tip.innerHTML = html; tip.classList.add('on'); place(x,y); }
+  function hide(){ tip.classList.remove('on'); }
+  document.querySelectorAll('[data-tip]').forEach(function(el){
+    el.style.cursor = 'pointer'; el.setAttribute('tabindex','0');
+    el.addEventListener('mouseenter', function(e){ show(el.dataset.tip, e.clientX, e.clientY); });
+    el.addEventListener('mousemove', function(e){ place(e.clientX, e.clientY); });
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', function(){ var r = el.getBoundingClientRect(); show(el.dataset.tip, r.left + r.width/2, r.top); });
+    el.addEventListener('blur', hide);
+  });
+
+  function svgX(svg, e){ var pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY; return pt.matrixTransform(svg.getScreenCTM().inverse()).x; }
+
+  // bottleneck scrubber: 10,000 → 0 over ~41.7 working days at 240 calls/day
+  var hit = document.getElementById('bn-hit');
+  if(hit){
+    var svg = hit.ownerSVGElement, xl = document.getElementById('bn-x'), dot = document.getElementById('bn-d');
+    hit.addEventListener('mousemove', function(e){
+      var x = Math.max(70, Math.min(979, svgX(svg, e)));
+      var day = (x - 70) / 909 * 41.7, left = Math.max(0, Math.round(10000 - day * 240));
+      xl.setAttribute('x1', x); xl.setAttribute('x2', x); xl.style.display = '';
+      dot.setAttribute('cx', x); dot.setAttribute('cy', 20 + (10000 - left) / 50); dot.style.display = '';
+      show('<b>Day ' + Math.round(day) + '</b><br>' + left.toLocaleString('en-IN') + ' candidates still waiting', e.clientX, e.clientY);
+    });
+    hit.addEventListener('mouseleave', function(){ xl.style.display='none'; dot.style.display='none'; hide(); });
+  }
+
+  // awareness chart crosshair: month readout
+  var aw = document.getElementById('aw-hit');
+  if(aw){
+    var asvg = aw.ownerSVGElement, ax = document.getElementById('aw-x');
+    aw.addEventListener('mousemove', function(e){
+      var x = Math.max(40, Math.min(550, svgX(asvg, e)));
+      var m = Math.round(1 + (x - 40) / 510 * 23);
+      ax.setAttribute('x1', x); ax.setAttribute('x2', x); ax.style.display = '';
+      show('<b>Month ' + m + '</b><br>Brand-led keeps building; paid reach resets whenever spend pauses', e.clientX, e.clientY);
+    });
+    aw.addEventListener('mouseleave', function(){ ax.style.display='none'; hide(); });
+  }
+
+  var links = [].slice.call(document.querySelectorAll('#menu a'));
+  var targets = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  function onScroll(){
+    var y = window.scrollY + 160, idx = 0;
+    targets.forEach(function(t,i){ if(t && t.getBoundingClientRect().top + window.scrollY <= y) idx = i; });
+    links.forEach(function(a,i){ a.classList.toggle('on', i === idx); });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+})();
+</script>
+</body>
+</html>
